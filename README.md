@@ -1,12 +1,12 @@
 # From RAG to ReAct
 
-[![Paper](https://img.shields.io/badge/Paper-IP%26M%202026-blue)](https://www.sciencedirect.com/journal/information-processing-and-management)
+[![Paper](https://img.shields.io/badge/Paper-Under%20Review-orange)](https://github.com/raulgdp/from-rag-to-react)
 [![Dataset](https://img.shields.io/badge/🤗%20Dataset-CNA--EISC--RAFT--58K-yellow)](https://huggingface.co/datasets/raulgdp/CNA-EISC-RAFT-58K)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green)](LICENSE)
 
 **A controlled four-way comparison of LLM architectures for low-resource institutional question answering**
 
-> Gutiérrez de Piñerez Reyes, R. E. *"From RAG to ReAct: A Controlled Comparison of LLM Architectures for Low-Resource Institutional Question Answering"* — Information Processing & Management, 2026.
+> Gutiérrez de Piñerez Reyes, R. E. *"From RAG to ReAct: A Controlled Comparison of LLM Architectures for Low-Resource Institutional Question Answering"* — manuscript under review, 2025.
 
 All four systems share identical retrieval infrastructure (BGE-M3 + BM25 + Qdrant, 79,879 chunks) and generator (DeepSeek-R1-0528), varying **only** in orchestration architecture — isolating orchestration as the sole independent variable.
 
@@ -41,13 +41,9 @@ from-rag-to-react/
 │   ├── eval_sysB_sysD.py
 │   ├── eval_sysC.py              ← Supports --resume for interrupted runs
 │   └── ragas_judge.py            ← DeepSeek-R1-0528 as independent RAGAS judge
-├── raft_dataset/
-│   ├── build_raft_58k.py         ← Dataset construction pipeline
-│   └── README.md
-└── results/
-    ├── main_results.csv
-    ├── per_category.csv
-    └── dre_per_round.csv
+└── raft_dataset/
+    ├── build_raft_58k.py         ← Dataset construction pipeline
+    └── README.md
 ```
 
 ---
@@ -195,13 +191,12 @@ The fine-tuning study (ChatAcredita PRO, QLoRA on Qwen3-14B) that uses the same 
 ## Citation
 
 ```bibtex
-@article{gutierrez2026fromrag,
-  title   = {From {RAG} to {ReAct}: A Controlled Comparison of {LLM} Architectures
-             for Low-Resource Institutional Question Answering},
-  author  = {Gutiérrez de Piñerez Reyes, Raúl Ernesto},
-  journal = {Information Processing \& Management},
-  year    = {2026},
-  note    = {EISC, Universidad del Valle, Cali, Colombia}
+@unpublished{gutierrez2025fromrag,
+  title  = {From {RAG} to {ReAct}: A Controlled Comparison of {LLM} Architectures
+            for Low-Resource Institutional Question Answering},
+  author = {Gutiérrez de Piñerez Reyes, Raúl Ernesto},
+  note   = {Manuscript submitted for publication. EISC, Universidad del Valle, Cali, Colombia},
+  year   = {2025},
 }
 ```
 
